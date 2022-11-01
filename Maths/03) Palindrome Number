@@ -1,0 +1,27 @@
+Input: n = 55555
+Output: Yes
+
+Input: n = 123
+Output: No
+
+
+class Solution
+{
+    public String is_palindrome(int n)
+    {
+        // Code here
+        int temp=n;
+        int sum=0;
+        while(n>0){
+            int x=n%10;
+            sum=(sum*10)+x;
+            n=n/10;
+        }
+        if(sum==temp){
+            return "Yes";
+        }
+        else{
+            return "No";
+        }
+    }
+}
