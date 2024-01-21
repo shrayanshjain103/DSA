@@ -1,15 +1,16 @@
 class Solution{
     static int evenlyDivides(int N){
-        // code here
-        int x = N; int count = 0;
-        while(x!=0){
-            int rem=x%10;
-             x = x/10;
-            if(rem>0 && N%rem==0){
-            count++;
-           }
-        }
-        
-        return count;
+Method 1: -
+//       int count=0;
+//         while(n>0){
+//             n=n/10;
+//             count++;
+//         }
+//         return count;
+
+
+Method 2: -
+         int res= (int) Math.floor(Math.log10(n)+1);
+         return res;
     }
 }
